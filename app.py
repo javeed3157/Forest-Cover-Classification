@@ -44,8 +44,7 @@ def downloadFile():
     try:
         if(os.path.isfile(r"C:\Users\SHAIK JAVEED SUHAIL\Desktop\forests\Forest-Cover-Classification\predictions.csv")):
             csv_path = r"C:\Users\SHAIK JAVEED SUHAIL\Desktop\forests\Forest-Cover-Classification\predictions.csv"
-            csv_file = "predictions.csv"
-            return send_file(csv_path,as_attachment=True,attachment_filename=csv_file)
+            return send_file(csv_path, as_attachment=True)
     except Exception:
         return Exception
 # main driver function
