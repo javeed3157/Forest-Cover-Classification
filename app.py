@@ -9,11 +9,11 @@ app = Flask(__name__)
 
 scaler = MinMaxScaler()
 
-@app.route('/')
+@app.route('/', methods = ['GET', 'POST'])
 def upload_csv():
     return render_template('index.html')
 
-@app.route('/uploader', methods = ['GET', 'POST'])
+@app.route('/uploader', methods = ['POST'])
 def upload_file():
    if request.method == 'POST':
        model = joblib.load("rf_smotekbest.pkl")
